@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<link href="assets/images/favicon.png" rel="icon" />
+<title>Documentation | Your ThemeForest item Name</title>
+<meta name="description" content="Your ThemeForest item Name and description">
+<meta name="author" content="harnishdesign.net">
+
+<!-- Stylesheet
+============================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Highlight Syntax -->
+<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+
+<!-- Here goes your Colors Css -->
+<link rel="stylesheet" type="text/css" href="assets/css/color-yellow.css" />
+
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header
+  ============================ -->
+  <header id="header" class="sticky-top"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+      <div class="container-fluid">
+        <!-- Sidebar Toggler -->
+		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+		
+		<!-- Logo --> 
+        <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="assets/images/showingbee-docs-logo.svg" alt="showing bee docs logo"/> </a> 
+		    <span class="text-2 ml-2">v1.0</span> 
+    <!-- Logo End -->
+        
+		<!-- Navbar Toggler -->
+		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+        
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End --> 
+  
+  <!-- Content
+  ============================ -->
+  <div id="content" role="main">
+    
+	<!-- Sidebar Navigation
+	============================ -->
+	<div class="idocs-navigation bg-light">
+      <ul class="nav flex-column ">
+        <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">HTML Structure</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_data_attr">Data Attribute</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Docs Content
+	============================ -->
+    <div class="idocs-content">
+      <div class="container"> 
+        
+        <!-- Getting Started
+		============================ -->
+        <section id="idocs_start">
+        <h1>Documentation</h1>
+        <h2>Your ThemeForest Item Name Here</h2>
+        <p class="lead">Thank you so much for purchasing our item from themeforest.</p>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong>Version:</strong> 1.0</li>
+					<li><strong>Author:</strong> <a href="https://www.showingbee.com" target="_blank">Showing Bee</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4">
+				<ul class="list-unstyled">
+					<li><strong class="font-weight-700">Created:</strong> 1 April, 2023</li>
+					<li><strong>Update:</strong> 1 April, 2023</li>
+				</ul>
+			</div>
+		</div>
+        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to email via <a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Item Support Page</a>.</p>
+        </section>
+        
+		<hr class="divider">
+		
+        <!-- Installation
+		============================ -->
+        <section id="idocs_installation">
+          <h2>Installation</h2>
+          <p class="lead">Follow the steps below to setup Showing Bee plugin:</p>
+          <ol>
+            <li>Import the following script into your <strong>HTML</strong> file after the body tag. You can use either the normal or minified version of the script
+              <pre>
+                <code class="html">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/gh/frederiiiick/sb-plugin/dist/sb-plugin-alpha.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Minified Version ============================================= --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/gh/frederiiiick/sb-plugin/dist/sb-plugin-alpha.min.js&quot;&gt;&lt;/script&gt;</code>
+              </pre>
+            </li>
+            <li>Add the sb-plugin element with the prefered id and mls number like this on the <strong>HTML</strong> body
+              <pre>
+                <code class="html">&lt;sb-plugin id=&quot;example-id&quot; data-mls-number=&quot;T3404758&quot;&gt;&lt;/sb-plugin&gt;</code>
+              </pre>
+            </li>
+            <li>Initialize the script with the id used on the sb-plugin element
+              <pre>
+                <code class="html">&lt;script type=&quot;text/javascript&quot;&gt;initSBPlugin('example-id');&lt;/script&gt;</code>
+              </pre>
+            </li>
+            <li>You are good to go for adding your content now!</li>
+          </ol>
+        </section>
+        
+		<hr class="divider">
+		
+        <!-- HTML Structure
+		============================ -->
+        <section id="idocs_html_structure">
+          <h2>HTML Structure</h2>
+          <p>iDocs follows a simple and easy to customize coding structure. Here is the sample for your reference:<br>
+            The template is based on <a class="ml-1" target="_blank" href="https://getbootstrap.com/"><i class="fas fa-external-link-alt"></i> Bootstrap Framework</a></p>
+          <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+
+&lt;!-- Your Title, Description, Stylesheets
+============================================= --&gt;
+
+&lt;/head&gt;
+
+&lt;body data-spy=&quot;scroll&quot; data-target=&quot;.idocs-navigation&quot; data-offset=&quot;125&quot;&gt;
+
+&lt;!-- Document Wrapper   
+=============================== --&gt;
+&lt;div id=&quot;main-wrapper&quot;&gt; 
+  
+  &lt;!-- Header
+  ============================ --&gt;
+  &lt;header id=&quot;header&quot; class=&quot;sticky-top&quot;&gt;
+   ......
+  &lt;/header&gt;
+  &lt;!-- Header End --&gt; 
+  
+  &lt;!-- Content
+  ============================ --&gt;
+  &lt;div id=&quot;content&quot; role=&quot;main&quot;&gt; 
+    
+    &lt;!-- Sidebar Navigation
+    ============================ --&gt;
+    &lt;div class=&quot;idocs-navigation bg-light&quot;&gt;
+     .....
+    &lt;/div&gt;
+    
+    &lt;!-- Docs Content
+    ============================ --&gt;
+    &lt;div class=&quot;idocs-content&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+        .......
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Content end --&gt; 
+  
+  &lt;!-- Footer --&gt;
+  &lt;footer id=&quot;footer&quot; class=&quot;section bg-dark footer-text-light&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt; ...... &lt;/div&gt;
+  &lt;/footer&gt;
+  &lt;!-- Footer end --&gt; 
+  
+&lt;/div&gt;
+&lt;!-- Document Wrapper end --&gt; 
+
+&lt;!-- JavaScript --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <p class="alert alert-info">If you need more information, please visit bootstrap site: <a target="_blank" href="https://getbootstrap.com/docs/4.4/layout/grid/">https://getbootstrap.com</a></p>
+        </section>
+        
+		<hr class="divider">
+		
+		<!-- Color Schemes
+		============================ -->
+        <section id="idocs_data_attr">
+          <h2>Color Schemes</h2>
+          <p>You can change your Website's Color Scheme in an instant. We have build <strong>10 Color</strong> css file for change template primary color.</p>
+          <ul>
+            <li><code>color-blue.css</code> - Blue Color</li>
+            <li><code>color-brown.css</code> - Brown Color</li>
+            <li><code>color-cyan.css</code> - Cyan Color</li>
+            <li><code>color-green.css</code> - Green Color</li>
+            <li><code>color-orange.css</code> - Orange Color</li>
+            <li><code>color-indigo.css</code> - Indigo Color</li>
+            <li><code>color-purple.css</code> - Purple Color</li>
+            <li><code>color-red.css</code> - Red Color</li>
+            <li><code>color-teal.css</code> - Teal Color</li>
+            <li><code>color-yellow.css</code> - Yellow Color</li>
+          </ul>
+          <p>Simply add Color CSS file link it in the Document <code>&lt;head&gt;</code>.<br>
+            Make sure you add the <code>css/color-blue.css</code> stylesheet in your head after the <code>css/stylesheet.css</code> file linking from above mentioned 10 color css file.</p>
+          <p><strong>For Example:</strong></p>
+          <pre><code class="html">&lt;head&gt;
+&lt;!-- Stylesheet
+============================== --&gt;
+&lt;!-- Bootstrap --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;
+&lt;!-- Font Awesome Icon --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/font-awesome/css/all.min.css&quot; /&gt;
+&lt;!-- Magnific Popup --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/magnific-popup/magnific-popup.min.css&quot; /&gt;
+&lt;!-- Highlight Syntax --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/highlight.js/styles/github.css&quot; /&gt;
+&lt;!-- Custom Stylesheet --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/stylesheet.css&quot; /&gt;
+
+&lt;!-- Here goes your Colors Css --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/color-orange.css&quot; /&gt;
+&lt;/head&gt;</code></pre>
+        </section>
+        
+      </div>
+    </div>
+	
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================ -->
+  <footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+        <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+        <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
+	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+  </footer>
+  <!-- Footer end -->
+  
+</div>
+<!-- Document Wrapper end --> 
+
+<!-- Back To Top --> 
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
+
+<!-- JavaScript
+============================ -->
+<script src="assets/vendor/jquery/jquery.min.js"></script> 
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Highlight JS -->
+<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
+<!-- Easing --> 
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Custom Script -->
+<script src="assets/js/theme.js"></script>
+</body>
+</html>
