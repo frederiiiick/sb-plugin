@@ -33,7 +33,7 @@ const sbButton = (element, size, extra_css) => {
     element.style.fontFamily = "'Proxima Nova', sans-serif";
     element.style.fontSize = "20px";
     element.style.padding = "0 40px";
-    element.style.background = "#FAC91F";
+    element.style.background = "transparent linear-gradient(103deg, #FAC91F 0%, #F8A728 100%) 0% 0% no-repeat padding-box";
 
     if (size === "normal") element.style.height = "50px";
     if (size === "large") element.style.height = "60px";
@@ -48,10 +48,14 @@ const sbButton = (element, size, extra_css) => {
     element.style.cssText += extra_css;
 
     element.addEventListener("mouseenter", (event) => {
-        element.style.opacity = ".75";
+        element.style.background = '#FAC91F'
     });
+    
     element.addEventListener("mouseleave", (event) => {
-        element.style.opacity = "1";
+        element.style.background = "transparent linear-gradient(103deg, #FAC91F 0%, #F8A728 100%) 0% 0% no-repeat padding-box";
+        if (extra_css.includes('background')) {
+            element.style.cssText += extra_css;
+        }
     });
 
     return element
