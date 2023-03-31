@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 <link href="assets/images/favicon.png" rel="icon" />
-<title>Documentation | Your ThemeForest item Name</title>
+<title>Documentation | Showing Bee Plugin</title>
 <meta name="description" content="Your ThemeForest item Name and description">
 <meta name="author" content="harnishdesign.net">
 
@@ -94,8 +94,8 @@
 		============================ -->
         <section id="idocs_start">
         <h1>Documentation</h1>
-        <h2>Your ThemeForest Item Name Here</h2>
-        <p class="lead">Thank you so much for purchasing our item from themeforest.</p>
+        <h2>Showing Bee Plugin</h2>
+        <p class="lead">A plugtin to connect with the hive.</p>
 		<hr>
 		<div class="row">
 			<div class="col-sm-6 col-lg-4">
@@ -111,7 +111,7 @@
 				</ul>
 			</div>
 		</div>
-        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to email via <a target="_blank" href="https://themeforest.net/user/harnishdesign/#contact?ref=HarnishDesign">Item Support Page</a>.</p>
+        <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please feel free to email via <a target="_blank" href="">Item Support Page</a>.</p>
         </section>
         
 		<hr class="divider">
@@ -139,7 +139,10 @@
                 <code class="html">&lt;script type=&quot;text/javascript&quot;&gt;initSBPlugin('example-id');&lt;/script&gt;</code>
               </pre>
             </li>
-            <li>You are good to go for adding your content now!</li>
+            <li>
+              You are good to go! You should be able to see a button like this if done successfully <br /> <br />
+                <sb-plugin id="test-id" data-mls-number="T3404758"></sb-plugin>
+            </li>
           </ol>
         </section>
         
@@ -149,63 +152,22 @@
 		============================ -->
         <section id="idocs_html_structure">
           <h2>HTML Structure</h2>
-          <p>iDocs follows a simple and easy to customize coding structure. Here is the sample for your reference:<br>
-            The template is based on <a class="ml-1" target="_blank" href="https://getbootstrap.com/"><i class="fas fa-external-link-alt"></i> Bootstrap Framework</a></p>
+          <p>Here is the full code used in the installation process for your reference:<br>
           <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
-
-&lt;!-- Your Title, Description, Stylesheets
-============================================= --&gt;
-
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
-
-&lt;body data-spy=&quot;scroll&quot; data-target=&quot;.idocs-navigation&quot; data-offset=&quot;125&quot;&gt;
-
-&lt;!-- Document Wrapper   
-=============================== --&gt;
-&lt;div id=&quot;main-wrapper&quot;&gt; 
-  
-  &lt;!-- Header
-  ============================ --&gt;
-  &lt;header id=&quot;header&quot; class=&quot;sticky-top&quot;&gt;
-   ......
-  &lt;/header&gt;
-  &lt;!-- Header End --&gt; 
-  
-  &lt;!-- Content
-  ============================ --&gt;
-  &lt;div id=&quot;content&quot; role=&quot;main&quot;&gt; 
-    
-    &lt;!-- Sidebar Navigation
-    ============================ --&gt;
-    &lt;div class=&quot;idocs-navigation bg-light&quot;&gt;
-     .....
-    &lt;/div&gt;
-    
-    &lt;!-- Docs Content
-    ============================ --&gt;
-    &lt;div class=&quot;idocs-content&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        .......
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;!-- Content end --&gt; 
-  
-  &lt;!-- Footer --&gt;
-  &lt;footer id=&quot;footer&quot; class=&quot;section bg-dark footer-text-light&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt; ...... &lt;/div&gt;
-  &lt;/footer&gt;
-  &lt;!-- Footer end --&gt; 
-  
-&lt;/div&gt;
-&lt;!-- Document Wrapper end --&gt; 
-
-&lt;!-- JavaScript --&gt;
+&lt;body&gt;
+    &lt;sb-plugin id=&quot;example-id&quot; data-mls-number=&quot;T3404758&quot;&gt;&lt;/sb-plugin&gt;
 &lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/gh/frederiiiick/sb-plugin/dist/sb-plugin-alpha.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;initSBPlugin('example-id');&lt;/script&gt;
 &lt;/html&gt;</code></pre>
-          <p class="alert alert-info">If you need more information, please visit bootstrap site: <a target="_blank" href="https://getbootstrap.com/docs/4.4/layout/grid/">https://getbootstrap.com</a></p>
+          <p class="alert alert-info">The plugin is a redirection link to Showing Bee listing page, for more information you can visite Showing Bee site: <a target="_blank" href="https://showingbee.com/">https://https://showingbee.com</a></p>
         </section>
         
 		<hr class="divider">
@@ -289,5 +251,7 @@
 <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
 <!-- Custom Script -->
 <script src="assets/js/theme.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/frederiiiick/sb-plugin/dist/sb-plugin-alpha.min.js"></script>
+<script>initSBPlugin('test-id');</script>
 </body>
 </html>
