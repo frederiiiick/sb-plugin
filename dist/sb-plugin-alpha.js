@@ -2,7 +2,7 @@ const initSBPlugin = (element_id) => {
     const element = document.getElementById(element_id);
     const mls_number = element.getAttribute("data-mls-number");
 
-    if (mls_number) {
+    if (element && mls_number) {
         const link = document.createElement("link");
         link.setAttribute("rel", "stylesheet");
         link.setAttribute("type", "text/css");
@@ -10,11 +10,13 @@ const initSBPlugin = (element_id) => {
         element.appendChild(link);
         
         const size = element.getAttribute("data-size");
+        const title = element.getAttribute("data-title");
+        const extra_css = element.getAttribute("data-extra-css");
         plugin_button = document.createElement("button");
-        plugin_button.innerHTML = "Showing Bee";
-        plugin_button = sbButton(plugin_button, size ? size : "normal");
+        plugin_button.innerHTML = title ? title : "Showing Bee";
+        plugin_button = sbButton(plugin_button, size ? size : "normal", extra_css);
     
-        plugin_button.addEventListener("click", () => onPluginClick(mls_number));
+        plugin_button.addEventListener("click", () => onPluginClick(element, mls_number));
     
         element.appendChild(plugin_button);
     } else {
@@ -22,7 +24,7 @@ const initSBPlugin = (element_id) => {
     }
 }
 
-const sbButton = (element, size) => {
+const sbButton = (element, size, extra_css) => {
     element.style.border = "none";
     element.style.borderRadius = "10px";
     element.style.color = "white";
@@ -42,6 +44,9 @@ const sbButton = (element, size) => {
         element.style.height = "40px";
         element.style.padding = "0 30px";
     }
+
+    element.style.cssText += extra_css;
+
     element.addEventListener("mouseenter", (event) => {
         element.style.background = '#FAC91F'
     });
@@ -53,6 +58,11 @@ const sbButton = (element, size) => {
 }
 
 
-const onPluginClick = (mls_number) => {
-    window.open(`https://www.showingbee.com/listings/1/${mls_number}`, '_blank');
+const onPluginClick = (element, mls_number) => {
+    const for_agennt = element.getAttribute("data-agent-request");
+    if (for_agennt) {
+        window.open(`https://www.showingbee.com/for-agents/1/${mls_number}`, '_blank');
+    } else {
+        window.open(`https://www.showingbee.com/listings/1/${mls_number}`, '_blank');
+    }
 }

@@ -55,7 +55,7 @@
 		
 		<!-- Logo --> 
         <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="assets/images/showingbee-docs-logo.svg" alt="showing bee docs logo"/> </a> 
-		    <span class="text-2 ml-2">v1.0</span> 
+		    <span class="text-2 ml-2">v1.2</span> 
     <!-- Logo End -->
         
 		<!-- Navbar Toggler -->
@@ -152,7 +152,7 @@
 		============================ -->
         <section id="idocs_html_structure">
           <h2>HTML Structure</h2>
-          <p>Here is the full code used in the installation process for your reference:<br>
+          <p>Here's the sample full code used in the installation process for your reference:<br>
           <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -172,44 +172,39 @@
         
 		<hr class="divider">
 		
-		<!-- Color Schemes
-		============================ -->
+		<!-- Data Attributes ============================ -->
         <section id="idocs_data_attr">
-          <h2>Color Schemes</h2>
-          <p>You can change your Website's Color Scheme in an instant. We have build <strong>10 Color</strong> css file for change template primary color.</p>
+          <h2>Data Attributes</h2>
+          <p>You can add data attributes to change how the plugin will work and display on the web page</p>
           <ul>
-            <li><code>color-blue.css</code> - Blue Color</li>
-            <li><code>color-brown.css</code> - Brown Color</li>
-            <li><code>color-cyan.css</code> - Cyan Color</li>
-            <li><code>color-green.css</code> - Green Color</li>
-            <li><code>color-orange.css</code> - Orange Color</li>
-            <li><code>color-indigo.css</code> - Indigo Color</li>
-            <li><code>color-purple.css</code> - Purple Color</li>
-            <li><code>color-red.css</code> - Red Color</li>
-            <li><code>color-teal.css</code> - Teal Color</li>
-            <li><code>color-yellow.css</code> - Yellow Color</li>
+            <li><code>data-mls-number</code> <span class="badge badge-danger text-uppercase mr-2">Required</span> - declade the <strong>MLS Number</strong> of the listing</li>
+            <li><code>data-size</code> - specify the size of the button, <code>default</code> is <strong>normal</strong> (choices: small, normal, large)</li>
+            <li><code>data-agent-request</code> - indicate if the link would go to for agent request page or listing page, <code>default</code> is <strong>false</strong> (choices: true, false)</li>
+            <li><code>data-title</code> - change button title, <code>default</code> is <strong>Showing Bee</strong></li>
+            <li><code>data-extra-css</code> - add extra inline css styling to the button, make sure to seperate the styling with a <strong>semi-colon</strong></li>
           </ul>
-          <p>Simply add Color CSS file link it in the Document <code>&lt;head&gt;</code>.<br>
-            Make sure you add the <code>css/color-blue.css</code> stylesheet in your head after the <code>css/stylesheet.css</code> file linking from above mentioned 10 color css file.</p>
+          <p>Simply add the attributes in the <code>&lt;sb-plugin&gt;</code> element.<br>
+            Make sure to add the <code>id</code> and <code>data-mls-number</code> on the element to make the plugin work, since these both are required attributes.</p>
           <p><strong>For Example:</strong></p>
-          <pre><code class="html">&lt;head&gt;
-&lt;!-- Stylesheet
-============================== --&gt;
-&lt;!-- Bootstrap --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;
-&lt;!-- Font Awesome Icon --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/font-awesome/css/all.min.css&quot; /&gt;
-&lt;!-- Magnific Popup --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/magnific-popup/magnific-popup.min.css&quot; /&gt;
-&lt;!-- Highlight Syntax --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/vendor/highlight.js/styles/github.css&quot; /&gt;
-&lt;!-- Custom Stylesheet --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/stylesheet.css&quot; /&gt;
-
-&lt;!-- Here goes your Colors Css --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/color-orange.css&quot; /&gt;
-&lt;/head&gt;</code></pre>
+          <pre><code class="html">&lt;sb-plugin 
+  id=&quot;example-id&quot;
+  data-mls-number=&quot;T3404758&quot;
+  data-size=&quot;small&quot;
+  data-agent-request=&quot;true&quot;
+  data-title=&quot;View on Showing Bee&quot;
+  data-extra-css=&quot;background: #2a2a2a;&quot;
+&gt;&lt;/sb-plugin&gt;</code></pre>
+          <p><strong>Result:</strong></p>
         </section>
+
+        <sb-plugin 
+          id="test-id-2"
+          data-mls-number="T3404758"
+          data-size="small"
+          data-agent-request="true"
+          data-title="View on Showing Bee"
+          data-extra-css="background: #2a2a2a;"
+        ></sb-plugin>
         
       </div>
     </div>
@@ -252,6 +247,6 @@
 <!-- Custom Script -->
 <script src="assets/js/theme.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/frederiiiick/sb-plugin/dist/sb-plugin-alpha.min.js"></script>
-<script>initSBPlugin('test-id');</script>
+<script>initSBPlugin('test-id'); initSBPlugin('test-id-2');</script>
 </body>
 </html>
