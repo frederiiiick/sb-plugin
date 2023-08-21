@@ -1,8 +1,9 @@
 const initSBPlugin = (element_id) => {
     const element = document.getElementById(element_id);
     const mls_number = element.getAttribute("data-mls-number");
+    const mls_source = element.getAttribute("data-mls-source");
 
-    if (element && mls_number) {
+    if (element && mls_number && mls_source) {
         const link = document.createElement("link");
         link.setAttribute("rel", "stylesheet");
         link.setAttribute("type", "text/css");
@@ -16,7 +17,7 @@ const initSBPlugin = (element_id) => {
         plugin_button.innerHTML = title ? title : "Showing Bee";
         plugin_button = sbButton(plugin_button, size ? size : "normal", extra_css);
     
-        plugin_button.addEventListener("click", () => onPluginClick(element, mls_number));
+        plugin_button.addEventListener("click", () => onPluginClick(element, mls_number, mls_source));
     
         element.appendChild(plugin_button);
     } else {
@@ -62,7 +63,7 @@ const sbButton = (element, size, extra_css) => {
 }
 
 
-const onPluginClick = (element, mls_number) => {
+const onPluginClick = (element, mls_number, mls_source) => {
     const agent_info = element.getAttribute("data-agent-info");
     const win_type = element.getAttribute("data-window") ? element.getAttribute("data-window") : 'popup';
     
@@ -95,11 +96,11 @@ const onPluginClick = (element, mls_number) => {
             params.push(`agent_company=${JSON.parse(agent_info).company}`)
         }
         if (win_type === 'tab') {
-            window.open(`${url}/listing/1/${mls_number}/request-calendar/?${params.join('&')}`, '_blank');
+            window.open(`${url}/listing/${mls_source}/${mls_number}/request-calendar/?${params.join('&')}`, '_blank');
         } else if (win_type === 'popup') {
-            window.open(`${url}/listing/1/${mls_number}/request-calendar/?${params.join('&')}`,'popup_form', 'height=833px,width=1024px');
+            window.open(`${url}/listing/${mls_source}/${mls_number}/request-calendar/?${params.join('&')}`,'popup_form', 'height=833px,width=1024px');
         }
     } else {
-        console.log('Agent information must be provided!')
+        alert('Agent information must be provided!')
     }
 }
