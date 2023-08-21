@@ -53,7 +53,7 @@ const sbButton = (element, size, extra_css) => {
     
     element.addEventListener("mouseleave", (event) => {
         element.style.background = "transparent linear-gradient(103deg, #FAC91F 0%, #F8A728 100%) 0% 0% no-repeat padding-box";
-        if (extra_css.includes('background')) {
+        if (extra_css && extra_css.includes('background')) {
             element.style.cssText += extra_css;
         }
     });
@@ -63,10 +63,43 @@ const sbButton = (element, size, extra_css) => {
 
 
 const onPluginClick = (element, mls_number) => {
-    const for_agennt = element.getAttribute("data-agent-request");
-    if (for_agennt) {
-        window.open(`https://www.showingbee.com/for-agents/1/${mls_number}`, '_blank');
+    const agent_info = element.getAttribute("data-agent-info");
+    const win_type = element.getAttribute("data-window") ? element.getAttribute("data-window") : 'popup';
+    
+    let url = 'https://www.showingbee.com';
+    
+    if (element.getAttribute("data-env")) {
+        if (element.getAttribute("data-window") === 'dev') {
+            url = 'http://localhost:3000';
+        } else if (element.getAttribute("data-window") === 'prod') {
+            url = 'https://www.showingbee.com';
+        }
+    }
+
+    if (agent_info) {
+        let params = [];
+
+        if (JSON.parse(agent_info).email) {
+            params.push(`agent_email=${JSON.parse(agent_info).email}`)
+        }
+        if (JSON.parse(agent_info).first_name) {
+            params.push(`agent_first_name=${JSON.parse(agent_info).first_name}`)
+        }
+        if (JSON.parse(agent_info).last_name) {
+            params.push(`agent_last_name=${JSON.parse(agent_info).last_name}`)
+        }
+        if (JSON.parse(agent_info).phone_number) {
+            params.push(`agent_phone_number=${JSON.parse(agent_info).phone_number.replace("+1","")}`)
+        }
+        if (JSON.parse(agent_info).company) {
+            params.push(`agent_company=${JSON.parse(agent_info).company}`)
+        }
+        if (win_type === 'tab') {
+            window.open(`${url}/listing/1/${mls_number}/request-calendar/?${params.join('&')}`, '_blank');
+        } else if (win_type === 'popup') {
+            window.open(`${url}/listing/1/${mls_number}/request-calendar/?${params.join('&')}`,'popup_form', 'height=833px,width=1024px');
+        }
     } else {
-        window.open(`https://www.showingbee.com/listings/1/${mls_number}`, '_blank');
+        console.log('Agent information must be provided!')
     }
 }
