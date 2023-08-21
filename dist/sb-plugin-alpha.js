@@ -70,9 +70,9 @@ const onPluginClick = (element, mls_number, mls_source) => {
     let url = 'https://www.showingbee.com';
     
     if (element.getAttribute("data-env")) {
-        if (element.getAttribute("data-window") === 'dev') {
+        if (element.getAttribute("data-env") === 'dev') {
             url = 'http://localhost:3000';
-        } else if (element.getAttribute("data-window") === 'prod') {
+        } else if (element.getAttribute("data-env") === 'prod') {
             url = 'https://www.showingbee.com';
         }
     }
